@@ -1,0 +1,419 @@
+#business-page-grid > div{
+    border-radius: .25rem;
+}
+
+#company-info div[id^="company-"]:before {
+    content: '';
+    display: block;
+    height: 70px;
+    margin-top: -70px;
+    visibility: hidden;
+}
+
+/* #business-page-grid{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-areas:
+'filter filter filter'
+'lists lists sidebar';
+}
+
+
+#business-filter{
+grid-area: filter;
+}
+#business-lists{
+grid-area: lists;
+}
+#business-sidebar{
+grid-area: sidebar;
+} */
+
+.business-show-item{
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding-bottom: 1rem;
+    position: relative;
+    padding: 1rem;
+    border-radius: .25rem;
+    transition: .3s;
+}
+.business-show-item.sponsored{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.business-show-item:hover{
+    border: 1px solid var(--primary);
+    background: var(--light);
+}
+/* .business-show-item.sponsored .business-des::before{
+content: 'Featured ★';
+display: block;
+color: var(--success);
+font-size: 10px;
+margin-bottom: .5rem;
+} */
+
+[data-spy=scroll]{
+    scroll-behavior: smooth;
+}
+.business-des{
+    margin-bottom: 1rem;
+}
+#business-filter{
+    overflow-y: hidden;
+}
+
+#business-filter{
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    z-index: 1010;
+}
+#business-filter .btn-dropdown::after{
+    display: block;
+    float: right;
+    content: "expand_less";
+    font-family: 'Material Icons';
+}
+#business-filter .btn-dropdown.collapsed::after{
+    content: "expand_more";
+}
+#business-filter p > .nav-link{
+    font-weight: bold;
+    color: var(--dark);
+}
+#business-filter .collapse > .nav-link{
+    display: flex;
+    align-items: center;
+}
+
+#business-filter .parent-cate:hover {
+    background-color: var(--light);
+}
+/* #business-filter .collapse > .nav-link::after{
+content: attr(numbers-of-business);
+display: inline-block;
+padding: .125em .6em;
+font-size: 75%;
+font-weight: 700;
+line-height: 1;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+margin-left: .5rem;
+border-radius: 10rem;
+border: 1px solid;
+} */
+
+#business-filter .collapse span.sub-article-num {
+    display: inline-block;
+    padding: .125em .6em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    margin-left: .5rem;
+    border-radius: 10rem;
+    border: 1px solid;
+}
+
+[numbers-of-business='0'], [numbers-of-business='']{
+    display: none;
+}
+.business-cat > a{
+    white-space: normal;
+    flex: 0 1 auto !important;
+    -ms-flex: 0 1 auto !important;
+}
+.business-name{
+    font-size: 18px;
+    color: #1a0dab;
+    font-weight: 600;
+    padding: 0;
+    display: block;
+    position: relative;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: center;
+}
+.business-name .material-icons{
+    font-size: 21px;
+    margin-left: .5rem;
+}
+.business-contact .disabled{
+    filter: grayscale(1);
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+.business-desc{
+    color: #155724;
+    display: grid;
+}
+
+.business-desc:hover {
+    text-decoration: none;
+    color: #155724;
+}
+
+.business-contact > .badge i {
+    font-size: 18px;
+}
+.business-contact > .badge span{
+    font-size: 12px;
+}
+.business-contact > .badge:hover span{
+    display: inline-block !important;
+}
+/* #business-lists[filter]::before{
+content: attr(filter) 'のリスト' ;
+display: block;
+font-weight: 500;
+font-size: 2rem;
+color: var(--secondary);
+} */
+#business-lists[filter='']::before{
+    content: none;
+}
+.business-show-item .img-contain{
+    object-position: top;
+}
+
+.col-form-label, #status{
+    display: flex;
+    align-items: center;
+}
+#poste-Contact button{
+    display: inline-flex !important;
+    align-items: center;
+}
+
+.business-nav .nav-link[aria-expanded='true']{
+    background: #fff;
+}
+
+
+/* detail page */
+#company-header{
+    background-image: linear-gradient(45deg,rgba(255,255,255,.02) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.05) 50%,rgba(255,255,255,.05) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+    width: 100%;
+}
+#company-header.company-internet{
+    background-color: #011640;
+}
+.company-internet::before{
+    content: url(../../images/poste/internet.svg);
+    display: inline-block;
+    margin-right: 1rem;
+    width: 56px;
+}
+.divider{
+    width: 100%;
+    height: 2px;
+    border-radius: .25rem;
+    background-color: var(--p-blue);
+}
+.info-item{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #ccc;
+}
+.info-item:nth-of-type(odd){
+    background-color: var(--light);
+}
+.info-item:last-child{
+    border-bottom: none;
+}
+.dt{
+    font-weight: bold;
+}
+.dd input{
+    width: 100%;
+}
+
+.business-nav{
+    width: 100%;
+    max-height: 100vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 1021;
+}
+.business-nav a{
+    display: block;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    text-align: left;
+}
+.scroll-spy{
+    display: block;
+}
+.scroll-spy::before{
+    display: block;
+    height: 70px;
+    margin-top: -70px;
+    visibility: hidden;
+    content: "";
+}
+
+.page-intro{
+    position: relative;
+    overflow: hidden;
+    background-color: #ebeceb;
+    min-height: 45vh;
+}
+.introduction{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.introduction span{
+    font: inherit;
+    display: inline-block;
+}
+
+#btn-pdf {
+    width: 80%;
+}
+
+@media (min-width: 576px){
+    .introduction h1{
+        font-size: 3.5rem;
+    }
+}
+@media (min-width: 768px){
+    .introduction h1{
+        font-size: 4.5rem;
+    }
+}
+@media (min-width: 992px){
+    .introduction h1{
+        font-size: 5.5rem;
+    }
+
+    #business-sidebar #sticky {
+        margin-bottom: 82px;
+    }
+
+    #btn-pdf {
+        width: 25%;
+    }
+}
+
+.text-serif{
+    font-family: serif;
+}
+
+#header-cate-list .swiper-slide:hover, #header-cate-list .swiper-slide:hover a {
+    background-color: #f2f2f2 !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#service-list .service-item {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+#service-list .service-item:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+
+.business-detail-map-item.active {
+    background-color: #c0deff;
+}
+
+.business-detail-map-item {
+    background-color: var(--light);
+}
+
+
+.business-detail-map-item .address {
+    color: #035ffe;
+    font-size: 1.3rem;
+}
+
+.business-detail-map-item a.preview i.fa-eye {
+    display: none;
+}
+
+.business-detail-map-item a.preview:hover i.fa-eye {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    border-radius: 50%;
+}
+
+#relate-list .swiper-pagination {
+    position: relative;
+    padding-top: 0.8rem;
+}
+
+#image-route-guide-modal .address {
+    padding: 0.8rem 1.1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin: 0;
+}
+
+
+/*---------------------------------------------------*/
+
+[class*=btn-save], [class*=btn-share]{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+[class*=btn-save]:hover, [class*=btn-share]:hover{
+    background: var(--grey);
+}
+[class*=btn-save]::before, [class*=btn-share]::before{
+    display: inline-block;
+    margin-right: .25rem;
+    font-family: 'Material Icons';
+    font-size: 21px;
+}
+.btn-save::before{
+    /*content: 'favorite_border';*/
+    content: 'bookmark ';
+}
+/*.btn-save:hover::before, .btn-save:focus::before, .btn-saved::before{*/
+.btn-save:hover::before, .btn-saved::before{
+    content: 'bookmark ';
+    color: var(--danger);
+}
+.btn-share::before{
+    content: 'share';
+}
+.btn-share:hover::before, .btn-share:focus::before, .btn-shared::before{
+    color: var(--primary);
+}

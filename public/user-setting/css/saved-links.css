@@ -1,0 +1,43 @@
+.result_saved_link { 
+    width: 100%; 
+}
+
+.saved-timeline-new {
+    width: 100%;
+    color: var(--secondary);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f2f2f2;
+}
+
+/* Clearable text inputs */
+.clearable{
+    position: relative;
+    display: inline-block;
+}
+.clearable input[type=text]{
+    padding-right: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.clearable__clear{
+    display: block;
+    position: absolute;
+    right:0; top:0;
+    padding: 0 8px;
+    font-style: normal;
+    font-size: 1.5em;
+    user-select: none;
+    cursor: pointer;
+}
+.clearable input::-ms-clear {  /* Remove IE default X */
+    /*display: none;*/
+}
+
+.check-town, .disappear, .check-business {display: none;}
+
+.appear{display: block;}

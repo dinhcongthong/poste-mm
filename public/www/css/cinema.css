@@ -1,0 +1,28 @@
+.movie-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.movie-item:first-of-type {
+    padding-top: 0;
+}
+
+.movie-item:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.show-item:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+@media(max-width: 767.99px) {
+    #trailer-frame {
+        max-height: 100%;       
+    }
+    
+    #trailer .modal-content, #trailer .modal-content .modal-body {
+        max-height: 75vw;
+    }
+}

@@ -1,0 +1,52 @@
+.gallery-item a {
+    text-decoration: none;
+}
+.gallery-item  a:first-child {
+    position: absolute;
+    top: 6px;
+    left: 23px;
+    color: #fff;
+}
+
+.gallery-item  a:first-child i {
+    font-size: 13px;
+}
+.gallery-item  a:nth-child(2) {
+    position: absolute;
+    top: 6px;
+    right: 25px;
+    color: #fff;
+}
+
+.gallery-item .div-img-center {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    overflow: hidden;
+    border: 6px solid #343A40;
+    border-radius: 4px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.gallery-item:hover .div-img-center {
+    background-color: #ADADAD;
+    border: 6px solid #ADADAD;
+    cursor: pointer;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    background-position-y: 30px;
+    background-repeat: no-repeat;
+}
+
+ul.pagination {
+    text-align: center;
+    justify-content: center;
+}

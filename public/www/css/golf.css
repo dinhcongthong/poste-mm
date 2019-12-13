@@ -1,0 +1,123 @@
+.golf-menu {
+    overflow: hidden;
+    background-image: url(../../images/poste/golf-menu.png);
+    padding: 15px 5px 0;
+    -webkit-box-shadow: inset 0 -2px 25px -12px #000;
+    box-shadow: inset 0 -2px 25px -12px #000;
+}
+
+.golf-content .golf-heading {
+    overflow: hidden;
+    background-image: url(../../images/poste/golf-grass.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.golf-content .golf-heading img {
+    float: left;
+    display: inline-block;
+    height: 2.3rem;
+}
+
+.golf-content .golf-heading .golf-title {
+    float: left;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #538b38;
+    margin-top:0.6rem;
+    margin-left:0.5rem;
+}
+
+.golf-list #golf-list {
+    border: 1px dashed #428bca;
+    background-color: #e0f1f3;
+}
+
+.golf-list #golf-list .golf-item {
+    border-bottom: 1px dashed #428bca;
+}
+
+.golf-list #golf-list .golf-item:last-of-type {
+    border-bottom: none;
+}
+
+.golf-list .golf-item:first-of-type {
+    border-bottom: none;
+}
+
+.golf-list .golf-item:last-of-type {
+    border-top: none;
+}
+
+.golf-list .golf-item .title a {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.golf-list .golf-item a {
+    color: #333;
+}
+
+.golf-list .golf-item a:hover {
+    text-decoration: none;
+    color: #428bca;
+}
+
+.golf-list .golf-item .label {
+    background-color: #428bca;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.golf-list .golf-item .label.label-info {
+    padding: 0.5rem 0.6rem;
+}
+
+.golf-list .golf-item .label.label-info:hover {
+    box-shadow: 3px 3px 3px #86bce8;
+}
+
+.golf-list .golf-item .label-address {
+    line-height: 1.6;
+}
+
+.golf-list .golf-item .label-address:hover {
+    color: #428bca;
+    text-decoration: underline;
+}
+
+.golf-list .golf-item .label-phone:hover {
+    color: #86bce8;
+}
+
+/* Detail */
+#golf-detail .title h2 {
+    font-size: 1.7rem;
+}
+
+#golf-detail .title span.update_at {
+    color: #adadad;
+    font-weight: bold;
+}
+
+#golf-detail .content .golf-info {
+    border: 2px dashed #07A212;
+    padding: 1rem;
+}
+
+#golf-detail .content .golf-info p {
+    font-size: 1.2rem;
+}
+
+#golf-detail .content #table-info td, #golf-detail .content #table-info th {
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+/* End Detail */
